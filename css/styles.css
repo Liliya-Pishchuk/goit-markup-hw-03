@@ -78,7 +78,7 @@ hidden {
 /*-----------------start header-----------------*/
 
 .page-header {
-  border: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
 }
 
 .header-conteiner {
@@ -190,7 +190,8 @@ hidden {
   padding: 10px 32px;
   min-width: 200px;
   border-radius: 4px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: none;
+  /*box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);*/
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
@@ -404,6 +405,7 @@ hidden {
 .project-description {
   padding: 20px 24px;
   border: 1px solid var(--border-color);
+  border-top: none;
 }
 
 .projects-item-title {
