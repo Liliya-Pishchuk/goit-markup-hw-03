@@ -18,6 +18,7 @@ body {
   font-family: var(--primary-font-family);
   font-size: 14px;
   line-height: 0.03em;
+  letter-spacing: 0.03em;
   color: var(--primary-text-color);
   background-color: var(--fone-background-color);
 }
@@ -38,6 +39,8 @@ ul {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .list {
@@ -59,6 +62,17 @@ img {
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
+}
+
+hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
 }
 
 /*-----------------start header-----------------*/
@@ -191,19 +205,16 @@ img {
 }
 
 /*--------------specifics--------------*/
-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  border: 0;
-  clip: rect(0 0 0 0);
-}
-
 .specifics-list {
   display: flex;
+}
+
+.specifics-list-item {
+  width: 270px;
+}
+
+.specifics-list-item:not(:last-child) {
+  margin-right: 30px;
 }
 
 .specifics-list-title {
@@ -216,10 +227,6 @@ hidden {
 
 .specifics-list-text {
   line-height: 1.71;
-}
-
-.specifics-list-item:not(:last-child) {
-  margin-right: 10px;
 }
 
 /*----------------work----------------*/
@@ -264,7 +271,7 @@ hidden {
 }
 
 .team-list-item {
-  flex-basis: calc((100%-120px) / 4);
+  flex-basis: calc((100% - 120px) / 4);
   margin-left: 30px;
 }
 
@@ -345,7 +352,25 @@ hidden {
 /*-----------------------end Studio-----------------------*/
 
 /*-----------------------start Portfolio-----------------------*/
+
+/*------filter------*/
+.filter-list {
+  display: flex;
+  justify-content: center;
+}
+
+.filter-list-item {
+  margin-right: 8px;
+  margin-bottom: 50px;
+}
+
 .filter-list-button {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 22px;
+  padding-right: 22px;
+  border-radius: 4px;
+  border: transparent;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
@@ -353,6 +378,7 @@ hidden {
   letter-spacing: 0.03em;
   cursor: pointer;
   color: var(--title-text-color);
+  background-color: var(--second-background-color);
 }
 
 .filter-list-button:hover,
@@ -361,7 +387,27 @@ hidden {
   background-color: var(--button-color);
 }
 
+/*------projects------*/
+.projects-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-top: -30px;
+}
+
+.projects-list-item {
+  flex-basis: calc((100% - 90px) / 3);
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
+.project-description {
+  padding: 20px 24px;
+  border: 1px solid var(--border-color);
+}
+
 .projects-item-title {
+  margin-bottom: 4px;
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
